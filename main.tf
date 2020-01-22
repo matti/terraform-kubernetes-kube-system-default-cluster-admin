@@ -1,4 +1,7 @@
 resource "kubernetes_cluster_role_binding" "default" {
+  triggers = {
+    refresh = var.refresh
+  }
 
   metadata {
     name = "kube-system-default-cluster-admin"
