@@ -1,13 +1,6 @@
-locals {
-  refresh = var.refresh == null ? timestamp() : var.refresh
-}
-
 resource "kubernetes_cluster_role_binding" "default" {
   metadata {
     name = "kube-system-default-cluster-admin"
-    annotations = {
-      refresh = local.refresh
-    }
   }
 
   role_ref {
