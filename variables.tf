@@ -3,5 +3,5 @@ variable "kubeconfig" {
 }
 
 variable "refresh" {
-  default = ""
+  default = null
 }
